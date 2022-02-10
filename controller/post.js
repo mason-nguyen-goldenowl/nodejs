@@ -2,7 +2,7 @@ const Post = require("../model/post");
 
 exports.getPosts = async (req, res) => {
   const data = await Post.find();
-  console.log(data);
+  res.status(200).json({ data });
   res.end();
 };
 
